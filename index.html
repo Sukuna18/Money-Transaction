@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S01</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container dflex jcc aic fdc">
+      <div class="card">
+        <i class="fa-solid fa-plus modal"></i>
+        <div class="modal-container">
+          <div class="modal-content">
+            <div class="info">
+                <p>Nom</p>
+                <p>Prenom</p>
+                <p>Telephone</p>
+                <p>Email</p>
+                <p>Photo</p>
+                <p>Montant</p>
+              </div>
+              <div class="info-input">
+                <p><input type="text" id="nom-modal"></p>
+                <p><input type="text" id="prenom-modal"></p>
+                <p><input type="text" id="telephone-modal"></p>
+                <p><input type="text" id="email-modal"></p>
+                <p><input type="text" id="photo-modal"></p>
+                <p><input type="text" id="montant-modal"></p>
+              </div>
+          </div>
+            <div class="btn-modal">
+                <button type="button" class="save-modal">Enregistrer</button>
+                <button type="button" class="cancel">Annuler</button>
+            </div>
+        </div>
+        <div class="infos dflex">
+          <div class="info flex2 dflex fdc jcsb">
+            <div class="row dflex jcsb aic">
+              <span class="label">Nom :</span>
+              <span class="data" id="lastname">...</span>
+            </div>
+            <div class="row dflex jcsb aic">
+              <span class="label">Prénom :</span>
+              <span class="data" id="firstname">...</span>
+            </div>
+            <div class="row dflex jcsb aic">
+              <span class="label">Téléphone :</span>
+              <span class="data" id="phone">...</span>
+            </div>
+            <div class="row dflex jcsb aic">
+              <span class="label">Email :</span>
+              <span class="data" id="email">...</span>
+            </div>
+          </div>
+          <div class="photo flex1">
+            <img src="" alt="..." id="image" />
+          </div>
+        </div>
+        <hr />
+        <div class="transactions dflex fdc">
+          <div class="title" style="flex: 3">
+            <span>Transactions (<code>...</code>)</span>
+            <span id="btnDetail" class="btn-detail">+</span>
+          </div>
+          <div class="content">
+            <table>
+              <thead>
+                <tr>
+                  <th>Numero</th>
+                  <th>Date</th>
+                  <th>Sens</th>
+                  <th>Montant</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="form">
+          <div class="form-group">
+            <label for="mnt">Montant</label>
+            <input
+              type="number"
+              id="mnt"
+              placeholder="Montant..."
+              class="from-control"
+            />
+            <i class="fa-solid fa-eye"></i
+            ><input
+              type="number"
+              id="mnt"
+              placeholder="Numero..."
+              class="control-numero from-control"
+            />
+            <div class="search-div"></div>
+          </div>
+          <div class="form-group">
+            <label for="trans">Transaction</label>
+            <select id="trans" class="from-control">
+              <option value="1">Depot</option>
+              <option value="-1">Retrait</option>
+            </select>
+          </div>
+          <button type="button" class="save">Enregistrer</button>
+        </div>
+      </div>
+      <div class="navigation">
+        <button type="button" class="next">suivant</button>
+      </div>
+      <h1 class="error"></h1>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
